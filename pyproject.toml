@@ -1,7 +1,7 @@
 [project]
 name = "template-python-project"
 version = "0.1.0"
-description = "Add your description here"
+description = "Esse repositório foi criado com o propósito de servir como um template de um projeto Python."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
