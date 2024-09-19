@@ -21,8 +21,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        uv pip install
-        uv add interrogate --dev
+        uv install --dev
 
     - name: Run Interrogate
       run: |
