@@ -1,0 +1,35 @@
+name: Interrogate
+
+on: [push]
+
+jobs:
+  Scanning:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@v3
+
+    - name: Set Up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install UV
+      run: |
+        pip install uv
+
+    - name: Install Dependencies
+      run: |
+        uv add interrogate
+
+    - name: Run Interrogate
+      run: |
+        uv run interrogate -vv . --config pyproject.toml
+      continue-on-error: true
+
+    - name: Check Coverage
+      if: failure()
+      run: |
+        echo "Docstring Coverage Is Below 80%"
+        exit 1

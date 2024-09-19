@@ -1,0 +1,24 @@
+name: Pytest
+on: [push]
+
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Copiando os Arquivos do Repositório
+        uses: actions/checkout@v3
+
+      - name: Instalando o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalando o UV
+        run: pip install uv
+
+      - name: Instalando Dependências
+        run: uv add pytest
+
+      - name: Executando os Testes
+        run: uv run pytest
