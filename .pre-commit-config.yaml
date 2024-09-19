@@ -1,0 +1,68 @@
+exclude: '.venv'
+fail_fast: false
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    -   id: check-added-large-files
+        name: Prevenção para Commits de Arquivos Grandes
+
+    -   id: check-ast
+        name: Analisa Arquivos Python Válidos
+
+    -   id: check-docstring-first
+        name: Previne Código Antes da Docstring
+
+    -   id: check-json
+        name: Verificação de Arquivos JSON
+
+    -   id: check-toml
+        name: Verificação de Arquivos TOML
+
+    -   id: check-xml
+        name: Verificação de Arquivos XML
+
+    -   id: check-yaml
+        name: Verificação de Arquivos YAML
+
+    -   id: detect-private-key
+        name: Previne a Existência de Credenciais
+
+    -   id: double-quote-string-fixer
+        name: Substitui Aspas Duplas por Aspas Simples
+
+    -   id: end-of-file-fixer
+        name: Garante Arquivos com Última Linha em Branco
+
+    -   id: name-tests-test
+        name: Verifica Se os Arquivos de Teste Foram Nomeados Adequadamente
+
+    -   id: no-commit-to-branch
+        name: Previne Commit na Branch Main
+        args: [--branch, main]
+
+    -   id: pretty-format-json
+        name: Formata Arquivos JSON
+        args: [--autofix, --indent]
+
+    -   id: requirements-txt-fixer
+        name: Ordena Importações dos Requirements.txt
+
+    -   id: sort-simple-yaml
+        name: Ordena Conteúdo dos Arquivos YAML
+
+    -   id: trailing-whitespace
+        name: Remove Espaços em Branco à Direita
+        args: [--markdown-linebreak-ext=md]
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.5
+    hooks:
+        - id: ruff
+          name: Linter do Ruff
+          types_or: [ python, pyi ]
+          args: [ --fix ]
+
+        - id: ruff-format
+          name: Formater do Ruff
+          types_or: [ python, pyi ]
