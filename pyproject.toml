@@ -17,6 +17,7 @@ dev-dependencies = [
     "mkdocstrings-python>=1.11.1",
     "mkdocstrings>=0.26.1",
     "pre-commit>=3.8.0",
+    "pytest-cov>=5.0.0",
     "pytest>=8.3.3",
 ]
 
@@ -48,6 +49,7 @@ interrogate = 'interrogate -vv'
 lint = 'ruff check . && ruff check . --diff'
 pre-commit = 'pre-commit run'
 test = 'pytest -vv'
+test-cov = 'pytest --cov'
 
 [tool.ruff]
 line-length = 120
