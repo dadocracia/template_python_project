@@ -1,9 +1,13 @@
-## 📝 Descrição
+## Objetivo
 
-### Objetivo
 Descreva brevemente as mudanças feitas nesta Pull Request. O que foi alterado, adicionado ou removido?
 
-### Alterações Propostas
+---
+
+## Alterações Propostas
+
+- Item 1
+- Item 2
 
 ---
 
