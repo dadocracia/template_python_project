@@ -1,0 +1,12 @@
+name: Lint
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Validating:
+    uses: dadocracia/lint/blob/main/.github/workflows/ruff.yaml@main
