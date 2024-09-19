@@ -1,0 +1,94 @@
+site_name: Template Python Project
+site_description: >-
+  Esse repositório foi criado com o propósito de servir como um template de um projeto Python.
+copyright: Copyright &copy; Dadocracia
+repo_name: template_python_project
+repo_url: https://github.com/dadocracia/template_python_project
+edit_uri: tree/main/docs
+theme:
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - search.highlight
+    - search.share
+    - search.suggest
+  name: material
+  language: pt-BR
+  favicon: assets/dadocracia.jpeg
+  logo: assets/dadocracia.jpeg
+  palette:
+    - scheme: default
+      primary: black
+      accent: black
+      toggle:
+        icon: material/lightbulb
+        name: Modo Noturno
+    - scheme: slate
+      primary: pink
+      accent: white
+      toggle:
+        icon: material/lightbulb-outline
+        name: Modo Claro
+  font:
+    text: Roboto
+    code: Roboto Mono
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tilde
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - search
+  - mkdocstrings
+  - glightbox
+extra:
+  alternate:
+    - name: Português
+      link: /home/
+      lang: pt-BR
+nav:
+  - Home: "index.md"
