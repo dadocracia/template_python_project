@@ -1,4 +1,4 @@
-name: Docstring
+name: Docstrings
 
 on: [push]
 

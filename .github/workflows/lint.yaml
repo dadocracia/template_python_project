@@ -9,4 +9,4 @@ on:
 
 jobs:
   Validating:
-    uses: dadocracia/lint/blob/main/.github/workflows/ruff.yaml@main
+    uses: dadocracia/lint/.github/workflows/ruff.yaml@main
