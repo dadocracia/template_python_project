@@ -18,7 +18,7 @@ jobs:
         run: pip install uv
 
       - name: Instalando Dependências
-        run: uv add pytest
+        run: uv add pytest pytest-cov pytest-randomly
 
       - name: Executando os Testes
-        run: uv run pytest
+        run: uv run pytest -vv --cov --randomly-seed=last
