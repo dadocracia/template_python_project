@@ -1,9 +1,14 @@
 [project]
 name = "template-python-project"
 version = "0.1.0"
-description = "Add your description here"
+description = "Esse repositório foi criado com o propósito de servir como um template de um projeto Python."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "ruff>=0.6.5",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
 ]
