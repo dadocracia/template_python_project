@@ -1,4 +1,4 @@
-exclude: 'docs/|uv.lock|.venv|mkdocs.yml'
+exclude: 'docs/|uv.lock|.venv|mkdocs.yaml'
 fail_fast: false
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
