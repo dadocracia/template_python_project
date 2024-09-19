@@ -14,3 +14,15 @@ repos:
     -   id: trailing-whitespace
         name: Checagem de Espaço em Branco Sobrando
         verbose: true
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.5
+    hooks:
+        - id: ruff
+          name: Linter do Ruff
+          types_or: [ python, pyi ]
+          args: [ --fix ]
+
+        - id: ruff-format
+          name: Formater do Ruff
+          types_or: [ python, pyi ]
