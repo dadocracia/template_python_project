@@ -21,7 +21,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        uv install
+        uv pip install
         uv add interrogate --dev
 
     - name: Run Interrogate
@@ -32,5 +32,5 @@ jobs:
     - name: Check Coverage
       if: failure()
       run: |
-        echo "Docstring Coverage Is Below 80%!!!"
+        echo "Docstring Coverage Is Below 80%"
         exit 1
