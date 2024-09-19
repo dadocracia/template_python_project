@@ -43,7 +43,7 @@ repos:
 
     -   id: pretty-format-json
         name: Formata Arquivos JSON
-        args: [--autofix, --indent]
+        args: [--indent]
 
     -   id: requirements-txt-fixer
         name: Ordena Importações dos Requirements.txt

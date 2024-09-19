@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "ruff>=0.6.5",
+    "taskipy>=1.13.0",
 ]
 
 [tool.uv]
@@ -40,5 +41,10 @@ omit-covered-files = false
 generate-badge = "docs/assets/"
 badge-format = "svg"
 
-[tool.ruff]
-select = ["Q000"]
+[tool.taskipy.tasks]
+docs = 'mkdocs serve'
+format = 'ruff check . --fix && ruff format .'
+interrogate = 'interrogate -vv'
+lint = 'ruff check . && ruff check . --diff'
+pre-commit = 'pre-commit run'
+test = 'pytest -vv'
