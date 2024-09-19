@@ -49,6 +49,7 @@ interrogate = 'interrogate -vv'
 lint = 'ruff check . && ruff check . --diff'
 pre-commit = 'pre-commit run'
 test = 'pytest -vv'
+test-cov = 'pytest --cov'
 
 [tool.ruff]
 line-length = 120
