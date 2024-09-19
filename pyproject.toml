@@ -10,6 +10,7 @@ dependencies = [
 
 [tool.uv]
 dev-dependencies = [
+    "interrogate>=1.7.0",
     "mkdocs-glightbox>=0.4.0",
     "mkdocs-material>=9.5.35",
     "mkdocstrings-python>=1.11.1",
@@ -17,3 +18,27 @@ dev-dependencies = [
     "pre-commit>=3.8.0",
     "pytest>=8.3.3",
 ]
+
+[tool.interrogate]
+ignore-init-method = false
+ignore-init-module = true
+ignore-magic = false
+ignore-semiprivate = false
+ignore-private = false
+ignore-property-decorators = true
+ignore-module = true
+ignore-nested-functions = false
+ignore-nested-classes = true
+ignore-setters = false
+exclude = ["setup.py", "docs", "build", "bitbucket", "test", "*exceptions.py"]
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+verbose = 0
+quiet = false
+whitelist-regex = []
+color = true
+omit-covered-files = false
+generate-badge = "docs/assets/"
+badge-format = "svg"
+
+[tool.ruff]
+select = ["Q000"]
