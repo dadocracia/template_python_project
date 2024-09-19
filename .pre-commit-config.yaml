@@ -1,7 +1,16 @@
+exclude: '.venv'
+fail_fast: false
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v4.6.0
     hooks:
     -   id: check-yaml
+        name: Checagem de Arquivos YAML
+
     -   id: end-of-file-fixer
+        name: Checagem de Última Linha do Arquivo em Branco
+        verbose: true
+
     -   id: trailing-whitespace
+        name: Checagem de Espaço em Branco Sobrando
+        verbose: true
