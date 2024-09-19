@@ -48,3 +48,15 @@ interrogate = 'interrogate -vv'
 lint = 'ruff check . && ruff check . --diff'
 pre-commit = 'pre-commit run'
 test = 'pytest -vv'
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ['migrations', '.venv']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
