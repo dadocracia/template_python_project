@@ -1,4 +1,4 @@
-name: Docstrings
+name: Interrogate
 
 on: [push]
 
