@@ -15,6 +15,7 @@ repos:
 
     -   id: check-json
         name: Verificação de Arquivos JSON
+        exclude: '.devcontainer/devcontainer.json'
 
     -   id: check-toml
         name: Verificação de Arquivos TOML
@@ -44,6 +45,7 @@ repos:
     -   id: pretty-format-json
         name: Formata Arquivos JSON
         args: [--indent]
+        exclude: '.devcontainer/devcontainer.json'
 
     -   id: requirements-txt-fixer
         name: Ordena Importações dos Requirements.txt

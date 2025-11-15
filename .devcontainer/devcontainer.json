@@ -1,0 +1,28 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:2-3.12-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH=\"$HOME/.local/bin:$PATH\" && uv sync && uv tool install pre-commit && pre-commit install",
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:/home/vscode/.local/bin"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dracula-theme.theme-dracula",
+				"PKief.material-icon-theme",
+				"vivaxy.vscode-conventional-commits",
+				"ms-python.python",
+				"charliermarsh.ruff"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": ".venv/bin/python"
+			}
+		}
+	}
+}
